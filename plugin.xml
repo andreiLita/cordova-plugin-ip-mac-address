@@ -4,7 +4,7 @@
     <engines>
         <engine name="cordova" version=">=3.4.0" />
     </engines>
-    
+
     <js-module src="www/addressimpl.js" name="addressimpl">
         <clobbers target="addressimpl" />
     </js-module>
@@ -15,11 +15,12 @@
                 <param name="android-package" value="com.tv.plugin.AddressImpl" />
             </feature>
         </config-file>
-        
+
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         </config-file>
-        
+
         <source-file src="src/android/AddressImpl.java" target-dir="src/com/tv/plugin/" />
 
     </platform>
